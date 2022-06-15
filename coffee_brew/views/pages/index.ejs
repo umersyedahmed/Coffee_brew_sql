@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY COFFEE APP</title>
+</head>
+<body>
+    <h1>Which coffee maker would you like to use?</h1>
+    
+    <section>
+        <h2>Coffee Brewing methods :</h2>
+        <ul class="coffee">
+            <!-- Loop through quotes -->
+            <% for(let i = 0; i < rows.length; i++) {%>
+                <li class="coffee">
+                    <!-- Output name from the iterated quote object -->
+                    <span><%= rows[i].coffee_maker %></span>:
+                    <!-- Output quote from the iterated quote object -->
+                    <span><%= rows[i].water %></span> Grams of water,    
+                    <!-- Output name from the iterated quote object -->
+                    <span><%= rows[i].coffee %></span> Grams of coffee,    
+                    <!-- Output quote from the iterated quote object -->
+                    <span><%= rows[i].ice %></span> Grams of ice
+                </li>
+                <% } %>
+            </ul>
+        </section>
+    <script src='/main.js'></script>
+</body>
+</html>
